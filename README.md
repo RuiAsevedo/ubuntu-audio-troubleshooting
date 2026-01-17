@@ -12,10 +12,11 @@ Para forçar o redirecionamento imediato, utilizamos o utilitário `pactl`:
 1. Identificar o ID do dispositivo de saída (Sink):
    ```bash
    pactl list short sinks
-
+   
 2. Mover o fluxo de áudio do aplicativo para o fone (ID 2):
-   bash
-    pactl move-sink-input [ID_DO_APP] 2 
+
+bash
+   pactl move-sink-input [ID_DO_APP] 2 
 
 4. Solução Permanente (GUI)
   Instalei o "Pavucontrol" para gerenciar os fluxos de forma granular e persistente:
