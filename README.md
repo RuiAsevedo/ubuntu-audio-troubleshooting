@@ -14,23 +14,22 @@ Para forçar o redirecionamento imediato, utilizamos o utilitário `pactl`:
    pactl list short sinks
 
 2. Mover o fluxo de áudio do aplicativo para o fone (ID 2):
-   pactl move-sink-input [ID_DO_APP] 2
+   bash
+    pactl move-sink-input [ID_DO_APP] 2 
 
-3. Solução Permanente (GUI)
+4. Solução Permanente (GUI)
   Instalei o "Pavucontrol" para gerenciar os fluxos de forma granular e persistente:
   Instalação: sudo apt install pavucontrol -y
   Ação: Na aba "Reprodução", vinculei o Google Chrome permanentemente ao dispositivo QCY ArcBuds.
 
-4. Manutenção do Gerenciador de Pacotes (APT)
+5. Manutenção do Gerenciador de Pacotes (APT)
 Cenário: O comando sudo apt update apresentava erros de chave GPG (NO_PUBKEY) devido a um repositório do Spotify corrompido ou antigo.
 
   Solução
   Removemos a lista de fontes problemática para limpar o processo de atualização:
   
-  Bash
-  
-  sudo rm /etc/apt/sources.list.d/spotify.list
-  sudo apt update
+    sudo rm /etc/apt/sources.list.d/spotify.list
+    sudo apt update
   
 Tecnologias Utilizadas
   Sistema Operacional: Ubuntu 22.04 LTS
